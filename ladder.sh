@@ -1,0 +1,5 @@
+ffmpeg -i cat.mp4 -preset slow -codec:v libx264 -x264-params keyint=120:scenecut=0 -pix_fmt yuv420p -b:v 4500k -minrate 4500k -maxrate 9000k -bufsize 9000k -vf scale=-1:1080 -r 24 cat-1080.mp4
+ffmpeg -i cat.mp4 -preset slow -codec:v libx264 -x264-params keyint=120:scenecut=0 -pix_fmt yuv420p -b:v 2500k -minrate 1500k -maxrate 4000k -bufsize 5000k -vf scale=-1:720 -r 24 cat-720.mp4
+ffmpeg -i cat.mp4 -preset slow -codec:v libx264 -x264-params keyint=120:scenecut=0 -pix_fmt yuv420p -b:v 1000k -minrate 500k -maxrate 2000k -bufsize 2000k -vf scale=854:480 -r 24 cat-480.mp4
+ffmpeg -i cat.mp4 -preset slow -codec:v libx264 -x264-params keyint=120:scenecut=0 -pix_fmt yuv420p -b:v 750k -minrate 400k -maxrate 1000k -bufsize 1500k -vf scale=-1:360 -r 24 cat-360.mp4
+ffmpeg -i cat.mp4 -preset slow -codec:v libx264 -x264-params keyint=120:scenecut=0 -pix_fmt yuv420p -b:v 450k -minrate 300k -maxrate 700 -bufsize 1000 -vf scale=-2:240 -r 24 cat-240.mp4
